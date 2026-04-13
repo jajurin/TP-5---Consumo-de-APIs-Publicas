@@ -10,12 +10,15 @@
     <main class="container">
         <section class="pokemonSearch">
             <h1>Pokedex</h1>
-            <p>Busca por nombre</p>
-            <form id="pokemonForm">
-                <input type="text" name="pokemonName" placeholder="Ingrese el nombre/ID del Pokémon">
-                <button type="submit" class="btn">Buscar</button>
-            </form>
-            <div id="resultado"></div>
+            <p>Busca por nombre/ID</p>
+            <form id="pokemonFormulario">
+        <input type="text" id="pokemonNombre" placeholder="Ingrese el nombre/ID del Pokémon">
+
+  <button type="button" onclick="mostrarPokemon()" class="btn">
+  Buscar
+  </button>
+
+<div id="resultado"></div>
         </section>
     </main>
     <script src="index.js"></script>
