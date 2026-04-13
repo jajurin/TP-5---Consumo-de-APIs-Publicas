@@ -17,6 +17,16 @@ async function mostrarPokemon() {
     e.preventDefault();
 
     const nombre = e.target.pokemonName.value;
+    if (nombre == "") {
+  document.getElementById("resultado").innerHTML = `
+    <h2>Porfavor ingresar datos</h2>
+    <p>Ingresá un nombre o ID de Pokémon.</p>
+  `;
+  return;
+}
+    try{
+
+
     const pokemon = await obtenerPokemon(nombre);
 
     document.getElementById("resultado").innerHTML = `
@@ -26,6 +36,12 @@ async function mostrarPokemon() {
       <p>Altura: ${pokemon.altura*10 + "cm"}</p>
       <p>Tipos: ${pokemon.tipos.map(tipo => tipo.type.name).join(", ")}</p>
     `;
+        } catch (error){
+             document.getElementById("resultado").innerHTML = `
+        <h2> Pokémon no encontrado</h2>
+        <p>Verificá el nombre e intentá de nuevo.</p>
+      `;
+        }
   });
 }
 
