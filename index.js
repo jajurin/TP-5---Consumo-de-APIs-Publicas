@@ -15,16 +15,16 @@ async function obtenerPokemon(nombre) {
 }
 
 async function mostrarPokemon() {
-  const nombre = document.getElementById("pokemonNombre").value;
+  const nombre = document.getElementById("pokemonNombre").value
 
 
   if (nombre === "") {
-    resultado.innerHTML = `<h2>Ingresá un nombre/ID. No deje el campo vacio porfavor</h2>`;
+    resultado.innerHTML = `<h2>Ingresá un nombre/ID. No deje el campo vacio porfavor</h2>`
     return;
   }
-  resultado.innerHTML = `<h2>Buscando pokemon!...</h2>`;
+  resultado.innerHTML = `<h2>Buscando pokemon!...</h2>`
   try {
-    const pokemon = await obtenerPokemon(nombre);
+    const pokemon = await obtenerPokemon(nombre)
 
     resultado.innerHTML = `
       <h1>${pokemon.nombrePok}</h1>
@@ -33,8 +33,8 @@ async function mostrarPokemon() {
       <p>Altura: ${pokemon.altura * 10} cm</p>
       <p>Tipo/s: ${pokemon.tipos.map(t => t.type.name).join(", ")}</p>
     `;
-  } catch {;
-     resultado.innerHTML = `<img src="img/errorNotFound.png" alt=""> <h2>Pokémon no encontrado</h2>`;
+  } catch {
+     resultado.innerHTML = `<img src="img/errorNotFound.png" alt=""> <h2>Pokémon no encontrado</h2>`
 
   }
 }
