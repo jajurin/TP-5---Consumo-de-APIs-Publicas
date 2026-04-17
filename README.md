@@ -63,6 +63,7 @@ Se usó respuesta.ok para detectar si el Pokémon existe.
 Transformamos los datos recibidos asi tener una medida en que mostrarlos
 Usamos map para los tipos porque era mas de uno y nos causo un poco de problemas
 innerHTML para mostrar resultados, en el div resultados asi no modificar lo otro
+Aclaracion: Usado join para convertir tipos a string y separlos, y cuando ingresa id tambien busca, por que simplemente modificas el endpoint, la api no te dice "HEY ME MANDASTE VARIABLE NOMBRE CON UN NUMERO", el fetch bsucando donde pusiste, si vos mandaste un numero te va a buscar el pokemon por el id por que la apite lo permite. como la variable nombre, su nombre podria ser helado, e igual si metes nombre o id te la busca, porque modifca el endpoint
 
 DIFICULTADES:
 Entender nuestros problemas
