@@ -16,7 +16,7 @@ async function obtenerPokemon(nombre) {
 
 async function mostrarPokemon() {
   const nombre = document.getElementById("pokemonNombre").value;
-  const resultado = document.getElementById("resultado");
+
 
   if (nombre === "") {
     resultado.innerHTML = `<h2>Ingresá un nombre/ID. No deje el campo vacio porfavor</h2>`;
