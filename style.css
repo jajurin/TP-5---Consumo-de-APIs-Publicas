@@ -34,7 +34,7 @@ input {
 }
 
 #resultado img {
-  width: 120px;
+  width: 200px;
 }
 
 #resultado {
@@ -43,3 +43,4 @@ input {
   border-radius: 10px;
   border: 2px solid black;
 }
+

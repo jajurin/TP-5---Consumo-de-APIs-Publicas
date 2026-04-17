@@ -33,7 +33,8 @@ async function mostrarPokemon() {
       <p>Altura: ${pokemon.altura * 10} cm</p>
       <p>Tipo/s: ${pokemon.tipos.map(t => t.type.name).join(", ")}</p>
     `;
-  } catch {
-    resultado.innerHTML = `<h2>Pokémon no encontrado</h2>`;
+  } catch {;
+     resultado.innerHTML = `<img src="img/errorNotFound.png" alt=""> <h2>Pokémon no encontrado</h2>`;
+
   }
 }
