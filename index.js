@@ -22,7 +22,7 @@ async function mostrarPokemon() {
     resultado.innerHTML = `<h2>Ingresá un nombre/ID. No deje el campo vacio porfavor</h2>`;
     return;
   }
-  resultado.innerHTML = `<h2>Cargando...</h2>`;
+  resultado.innerHTML = `<h2>Buscando pokemon!...</h2>`;
   try {
     const pokemon = await obtenerPokemon(nombre);
 
@@ -31,7 +31,7 @@ async function mostrarPokemon() {
       <img src="${pokemon.imagen}" />
       <p>Peso: ${pokemon.peso / 10} kg</p>
       <p>Altura: ${pokemon.altura * 10} cm</p>
-      <p>Tipos: ${pokemon.tipos.map(t => t.type.name).join(", ")}</p>
+      <p>Tipo/s: ${pokemon.tipos.map(t => t.type.name).join(", ")}</p>
     `;
   } catch {
     resultado.innerHTML = `<h2>Pokémon no encontrado</h2>`;
